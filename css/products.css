@@ -1,0 +1,243 @@
+.product_wrapper{
+    width: 65%;
+    margin: auto;
+}
+
+.product_wrapper:after{
+    content: '';
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 1px;
+}
+
+.product_div{
+    width: calc(93% / 4);
+    box-sizing: border-box;
+    margin: 10px calc(3.5% / 4);
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    height: 340px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #efefef
+}
+.product_div_overlay{
+    cursor: pointer;
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0;
+    background: rgba(182, 200, 200,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.product_div_open_product{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    font-family: Montserrat,sans-serif;
+    color: #3d4246;
+    font-weight: bold;
+    font-size: 18px;
+    height: 10%;
+    width: 60%;
+    background: #fff;
+    margin: 50% auto auto auto;
+    display: block;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+}
+.product_div_open_product::-moz-focus-inner {
+    border: 0;
+}
+
+.product_div:hover .product_div_overlay {
+    opacity: 1;
+}
+
+.product_div:hover .product_div_image_thumb {
+    height: 92%;
+    margin-top: 4%;
+}
+
+.product_div_image_wrap{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    height: 80%;
+    width: 100%;
+}
+.product_div_top_wrap {
+    height: 90%;
+    background: #fff;
+    position: relative;
+}
+
+.product_div_top_wrap:after{
+    content: '';
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 1px;
+}
+
+.product_div_image_thumb {
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    height: 90%;
+    margin-top: 5%;
+    display: block;
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.product_div_info {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.product_div_info p{
+    font-family: Montserrat,sans-serif;
+    color: #3d4246 !important;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product_div_price{
+    position: absolute;
+    bottom: 0;
+    color: #114a49;
+    font-size: 17px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin: 0 !important;
+    line-height: 100%;
+    height: 8%;
+    font-family: Montserrat,sans-serif;
+    width: 100%;
+}
+
+.product_div_compare_price{
+    float: left;
+    display: block;
+    width: 70%;
+    text-decoration: line-through;
+}
+.product_div_current_price{
+    font-size: 20px;
+    float: right;
+    display: block;
+    width: 30%;
+    text-align: right;
+}
+
+@media screen and (max-width: 1730px) {
+    .product_wrapper {
+        width:80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .product_wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    .product_div{
+        width: calc(90% / 3);
+        box-sizing: border-box;
+        margin: 10px calc(5% / 3);
+        float: left;
+        overflow: hidden;
+        background: #fff;
+        height: 340px;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid #efefef
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product_wrapper {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+
+/* @media screen and (max-width: 1730px) {
+    .product_wrapper {
+        width: 65%;
+        margin: auto;
+    }
+} */
+
+
+
+@media screen and (max-width: 960px) {
+    .product_wrapper {
+        width: 80%;
+        margin: auto;
+    }
+        .product_div {
+        width: 45%;
+        margin: 10px calc(5% / 2);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .product_div {
+        width: 45%;
+        margin: 10px calc(5% / 2);
+    }
+
+    .product_wrapper {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .product_div {
+        width: 80%;
+        margin: 10px auto;
+        float: none;
+    }
+
+    .product_wrapper {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .product_div {
+        width: 80%;
+        margin: 10px auto;
+        height: 400px;
+        float: none;
+    }
+
+    .product_wrapper {
+        width: 95%;
+        margin: auto;
+    }
+    .product_div_image_wrap {
+        height: 55%;
+    }
+
+    .product_div_image_wrap:after {
+        height: 115px;
+        margin-top: -50px;
+    }
+}

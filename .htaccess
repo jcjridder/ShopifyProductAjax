@@ -1,0 +1,17 @@
+ErrorDocument 404 https://producten.gendtastic.nl/
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://producten.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^producten\.
+RewriteCond $1 !^(401.shtml)
+RewriteRule ^ https://producten.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^(.+)\.php$ /$1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ /$1.php [NC,END]
+
+RewriteRule ^(.+)\.html$ /$1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ /$1.html [NC,END]
